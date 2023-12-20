@@ -1,0 +1,6 @@
+{{ $name := .Get 0}}
+{{ $asset := resources.Get $name }}
+{{ $img := $asset.Fit "600x400" }}
+<figure class="image is-3by2">
+  <img alt="G-buffer" src="{{ $img.RelPermalink }}"/>
+</figure>
