@@ -17,6 +17,8 @@ I chose four different techniques to implement into the game engine. Deferred re
 The first step is to create the G-buffer which holds the different textures. In my implementation it has four textures which are both render targets and also shader resources for the second step. Render to these four textures with normal color, world position, texture color and glow map color. Below is an image captured with renderdoc displaying each texture.
 {{< figureSC G-buffer.png >}}
 
-After these textures are rendered they can be used as shader resources for the light part. Each point light is rendered using a sphere model which is scaled by the radius of the light and direction light is rendered using a fullscreen quad. The light part has two passes, one where it only renders front faces and writes to the stencil texture for every visible pixel and the second where it uses the stencil and depth texture to render the pixels inside the sphere. 
+After these textures are rendered they can be used as shader resources for the light part. Each point light is rendered using a sphere model which is scaled by the radius of the light and direction light is rendered using a fullscreen quad. The light part has two passes, one where it only renders front faces and writes to the stencil texture for every visible pixel and the second where it uses the stencil and depth texture to render the pixels inside the sphere.
+
+An issue is rendering transparent objects. It is impossible with deferred rendering so to solve this I added an extra array which contains the transparent objects and then use forward rendering after the deferred part. 
 {{< figureSC WoodlandBeatdownLightVolume960x600.png >}}
 ## Shadow mapping
