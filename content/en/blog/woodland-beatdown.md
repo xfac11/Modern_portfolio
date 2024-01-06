@@ -19,6 +19,6 @@ The first step is to create the G-buffer which holds the different textures. In 
 
 After these textures are rendered they can be used as shader resources for the light part. Each point light is rendered using a sphere model which is scaled by the radius of the light and direction light is rendered using a fullscreen quad. The light part has two passes, one where it only renders front faces and writes to the stencil texture for every visible pixel and the second where it uses the stencil and depth texture to render the pixels inside the sphere.
 
-An issue is rendering transparent objects. It is impossible with deferred rendering so to solve this I added an extra array which contains the transparent objects and then use forward rendering after the deferred part. 
+An issue is rendering transparent objects. It is impossible with deferred rendering so to solve this I added an extra array which contains the transparent objects and then use forward rendering after the deferred part. Another issue was the performance of the game. In testing it showed that forward rendering was faster than deffered rendering. (I think the amount of lights used in the game wasn't enough to gain the benefits of using deffered rendering.)
 {{< figureSC WoodlandBeatdownLightVolume960x600.png >}}
 ## Shadow mapping
