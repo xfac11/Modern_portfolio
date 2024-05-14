@@ -18,7 +18,7 @@ Apart from the shadows and particle system I also helped with the game logic, UI
 
 
 ## Particle system
-The system needed to be on the GPU for the fast performance and to use the GPU for this I needed to learn how to use compute shaders. For this
+The system needed to be on the GPU for fast performance and for this I needed to learn how to use compute shaders. For this
 I had a book **Practical Rendering & Computation with Direct3D 1** that taught me how to use them and call them from the CPU side with DirectX11. The book also had
 a section with particle systems which I could use for inspiration.
 
