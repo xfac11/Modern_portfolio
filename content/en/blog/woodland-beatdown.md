@@ -32,7 +32,9 @@ Another issue with this implementation is transparent objects. In this game we h
 
 
 ## Glow map and back to front
+I also created the glow post processing which uses a horizontal and vertical gaussian blur with vertex and pixel shader. This was used for moving platforms and glowing mushrooms in the background. It takes the glow map from the g-buffer and calculates the texture coordinates in the vertex shader and then uses them in the pixel shader to sample the neighbours and adding them together to create the blurred pixel. This is first done horizontally and then verticaly in a second pass. The blurred texture is then used in the light shader and only added when rendering the directional light. 
 
+Back to front rendering is used to render transparent objects. A selection sort is used on the array of transparent objects and then each object in that array is rendered. The objects are sorted using the distance from the camera to the object. While developing the game this function used a lot of the CPU time so my first solution was to execute it every 30th frame. This was a bad idea because it would lag the game every 30th frame which was worse than having a constant bad framerate. With more important tasks and no other solution and the deadline approached we decided to not order the objects and to keep the function but not executing it for later use and optimization.
 ## Reflection
-
+This was the first game project using DirectX11 so it was a good learning experience. Using the Visual Studio Graphics Debugger was a huge help when creating the different techniques and creating my first game engine with models and textures. It also taught me that different solutions are perfect for our game but might not be good in another game. For example the deferred renderer might have been good in a big scene with lots of lights but in our game a forward renderer is sufficient enough. Being my first group game project, it taught me how valuable a clear plan is and also having good communication with eachother. 
 
