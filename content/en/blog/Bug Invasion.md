@@ -9,12 +9,9 @@ thumbnail: /oil_spillage_head.PNG
 
 {{< youtube PP9p77pqGvc >}}
 
-Oil Spillage was my first big project with a total of 11 members. We were a group of game programmers and technical artists who were divided in different groups with different focus. My group was called the "graphics engine" where me and one other classmate was part of. We planned to have each object added to the engine before drawing instead of each frame to maximize performance. When the first triangle was on the screen I started to implement meshes and textures for the objects.
+Bug invasion was part of GitHub Game Off 2021 which is a Anual game jam where you get one month to create a game based on one theme. The theme this year was "Bug" so the first thing I did was to brainstorm ideas. After removing "ant simulation" and "fly tapper" I landed on a game where the bugs in a computer is getting destroyed by the player or "fixed". I chose the Unity game engine because of my past experience with it.
 
-The game needed particles for damage and weapon effects so I started to plan and develop the particle system which was a new challenge for me. It had to be on the GPU for performance sake and that was also a new area for me. A particle handler for multiple particle system with save and load for each particle system and a editor created with imgui. I also modified the particle system to create wheel tracks.
-After the particle system I created shadows for the engine with both spot and directional light support. Since the game was top down I could assume that for the shadows and use an easier and faster equation.
-
-Apart from the shadows and particle system I also helped with the game logic, UI for the car parts, some modeling and some texturing.
+The game is a third person shooter with a pistol to "kill" the bugs and a "fixer" to fix the glitches. I used Trello to plan the project and to manage all the tasks that needed to be done. 
 
 
 ## Particle system

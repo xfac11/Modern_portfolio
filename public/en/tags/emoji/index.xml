@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emoji on Portfolio</title>
+    <link>https://blist.vercel.app/en/tags/emoji/</link>
+    <description>Recent content in emoji on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://blist.vercel.app/en/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bug Invasion</title>
+      <link>https://blist.vercel.app/en/blog/bug-invasion/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>https://blist.vercel.app/en/blog/bug-invasion/</guid>
+      <description>Oil Spillage was my first big project with a total of 11 members. We were a group of game programmers and technical artists who were divided in different groups with different focus. My group was called the &amp;ldquo;graphics engine&amp;rdquo; where me and one other classmate was part of. We planned to have each object added to the engine before drawing instead of each frame to maximize performance. When the first triangle was on the screen I started to implement meshes and textures for the objects.</description>
+    </item>
+    <item>
+      <title>Oil Spillage</title>
+      <link>https://blist.vercel.app/en/blog/oil-spillage/</link>
+      <pubDate>Sat, 15 Aug 2020 00:00:00 +0000</pubDate>
+      <guid>https://blist.vercel.app/en/blog/oil-spillage/</guid>
+      <description>Oil Spillage was my first big project with a total of 11 members. We were a group of game programmers and technical artists who were divided in different groups with different focus. My group was called the &amp;ldquo;graphics engine&amp;rdquo; where me and one other classmate was part of. We planned to have each object added to the engine before drawing instead of each frame to maximize performance. When the first triangle was on the screen I started to implement meshes and textures for the objects.</description>
+    </item>
+    <item>
+      <title>Woodland beatdown</title>
+      <link>https://blist.vercel.app/en/blog/woodland-beatdown/</link>
+      <pubDate>Mon, 03 Jun 2019 00:00:00 +0000</pubDate>
+      <guid>https://blist.vercel.app/en/blog/woodland-beatdown/</guid>
+      <description>In this project we were 6 people in total and were tasked to create a game with DirectX 11 and C++. We landed on animal fighter with a gun-game mechanic. Each time you defeat an opponent you switch to the next animal. Having the last animal and defeating someone makes you the winner. We had our own group room where we could meet and work together and plan the game and choose what each member should do.</description>
+    </item>
+  </channel>
+</rss>

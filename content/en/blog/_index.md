@@ -1,4 +1,4 @@
 ---
-author: Katheryn Fox
+author: Filip Karlsson
 title: Projects
 ---
