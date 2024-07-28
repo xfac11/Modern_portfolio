@@ -11,7 +11,10 @@ thumbnail: /oil_spillage_head.PNG
 
 Bug invasion was part of GitHub Game Off 2021 which is a Anual game jam where you get one month to create a game based on one theme. The theme this year was "Bug" so the first thing I did was to brainstorm ideas. After removing "ant simulation" and "fly tapper" I landed on a game where the bugs in a computer is getting destroyed by the player or "fixed". I chose the Unity game engine because of my past experience with it.
 
-The game is a third person shooter with a pistol to "kill" the bugs and a "fixer" to fix the glitches. I used Trello to plan the project and to manage all the tasks that needed to be done. 
+The game is a third person shooter with a pistol to "kill" the bugs and a "fixer" to fix the glitches. I used Trello to plan the project and to manage all the tasks that needed to be done. With this project I wanted to tackle something new and finish in time for the jam. The new thing was procedural animation that I used for the bugs and player. 
+
+## Procedural animation
+My first step was to research procedural animation and ways of solving it. To lower the code and research needed I downloaded an already working inverse kinematics asset called Fast IK by [Daniel Erdmann](https://assetstore.unity.com/publishers/30624)
 
 
 ## Particle system
