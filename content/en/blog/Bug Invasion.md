@@ -14,7 +14,7 @@ Bug invasion was part of GitHub Game Off 2021 which is a Anual game jam where yo
 The game is a third person shooter with a pistol to "kill" the bugs and a "fixer" to fix the glitches. I used Trello to plan the project and to manage all the tasks that needed to be done. With this project I wanted to tackle something new and finish in time for the jam. The new thing was procedural animation that I used for the bugs and player. 
 
 ## Procedural animation
-My first step was to research procedural animation and ways of solving it. To lower the code and research needed I downloaded an already working inverse kinematics asset called Fast IK by [Daniel Erdmann](https://assetstore.unity.com/publishers/30624)
+My first step was to research procedural animation and ways of solving it. To lower the code and research needed I downloaded an already working inverse kinematics asset called Fast IK by [Daniel Erdmann](https://assetstore.unity.com/publishers/30624). It is used to determine the motion a bone structure should make to reach a position. For example in games where the foot of the character is placed on top of a staircase. The target is determined by a ray shooting down from the foot and colliding with something, say the staircase. In my game the bug has 6 legs, 3 on each side. Each leg has a target transform that follows the body of the bug in relation to the leg. The foot is stuck to the ground until it reaches a max distance from the target and is then moved to the target position and is then stuck again. In the code this is simply checked by a boolean CanMove and is true when the max distance is reached. When the move is complete the CanMove boolean is set to false again. 
 
 
 ## Particle system
