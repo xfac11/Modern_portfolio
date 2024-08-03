@@ -1,4 +1,4 @@
-{{ $asset := resources.Get "/partikelTriangle.png" }}
+{{ $asset := resources.Get "partikelTriangle.png" }}
 {{ $img := $asset.Fit "600x400" }}
 <figure class="image is-3by2">
   <img alt="Particle Triangle" src="{{ $img.RelPermalink }}" />
