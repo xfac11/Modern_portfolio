@@ -1,0 +1,15 @@
+<style>
+.nav li {display:inline;}
+</style>
+{{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
+<div class="nav">
+  <ul>
+    {{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
+    $taxonomy $tag) -}}
+    <li>
+      <a>{{ $tag }}</a>
+    </li>
+    {{- end -}} {{- end -}}
+  </ul>
+</div>
+{{ end }}

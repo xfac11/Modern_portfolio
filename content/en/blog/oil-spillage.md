@@ -3,7 +3,7 @@ author: "Filip Karlsson"
 title: "Oil Spillage"
 date: 2020-08-15
 description: "Top down car shooter made in C++ using the DirectX11 graphics API where I made a particle system and more"
-tags: ["emoji"]
+tags: ["DirectX11", "C++", "VS"]
 thumbnail: /oil_spillage_head.PNG
 ---
 
@@ -22,7 +22,7 @@ The system needed to be on the GPU for fast performance and for this I needed to
 I had a book **Practical Rendering & Computation with Direct3D 1** that taught me how to use them and call them from the CPU side with DirectX11. The book also had
 a section with particle systems which I could use for inspiration.
 
-The particle system has three parts to it, **Add**, **Update** and **Rendering**. The image below shows the whole process of the system. First frame we see the particles getting added to the first buffer and then updated and placed in the second buffer. Lastly the partciles are rendered. The next frame the buffers switches places and repeats the previous steps. 
+The particle system has three parts to it, **Add**, **Update** and **Rendering**. The image below shows the whole process of the system. First frame we see the particles getting added to the first buffer and then updated and placed in the second buffer. Lastly the partciles are rendered. The next frame the buffers switches places and repeats the previous steps.
 {{< figureSC partikelSystemet.png >}}
 ### Add
 Add dispatches an compute shader which uses a constant buffer that has the initial values for the particles position, direction and a vector with random values. The random vector is used for a generated direction which makes each add more random. The total lifetime for the particle is position w/a value. This is then added to the AppendBuffer and repeated for each particle added.
@@ -36,5 +36,3 @@ At first the particle system used a geometry shader to generate the vertices but
 
 ### Reflection
 This particles system was a fun and challenging task that required me to learn new techniques. Compute shaders, compute pipeline, different buffers and indirect instanced rendering to mention some. Communication and feedback from the team was important for the development. I could use that to fix bugs and create new functionality that team members found or wanted. For example when we added snow to a biome one member said that the snow didn't move much. They mentioned vector fields and after researching it I implemented it and showed it again. This constant feedback was used through the whole project and not unique to the particle system. I would improve on this system by adding texture support and blur. When playtesting one tester thought that the flame effect (which used one particle system) looked like slush. By using animated textures with the particle system this could be improved. Another improvement would be to enable collision to objects and not only a ground y value.
-
-
