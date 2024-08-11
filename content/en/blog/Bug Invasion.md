@@ -21,8 +21,51 @@ In Bug Invasion the bug has 6 legs, 3 on each side. For each leg there is a poin
 {{< youtube yGbqtCQnr20 >}}
 In the video above you can see the bug animated with a slower step time than in the finished game to show the different stages between not stuck and stuck.
 The target is represented as a green or red sphere wireframe. When it is red it means it is stuck and green when not stuck. The blue one is the point.
+
 ## Enemy AI using Unity NavMesh Agent
 The game world is placed inside a computer which has typical circuit board parts. To make the bugs avoid these parts and walk toward the player a Navigation mesh is used, also known as NavMesh. To create a NavMesh inside Unity I mark the parts and the ground as Navigation Static and then adjust the agent size and radius and also max slope and step height. There is only one size and radius when baking but I don't have to worry about that because I only have one type of enemy. To make the bug navigate this NavMesh the bug has a component called NavMesh Agent which has the same size and radius as used in the NavMesh. It also has some steering parameters that controls the speed, acceleration and rotation speed. I defined a bug and human agent size asset to make the bugs avoid colliding with each other and the player. (When developing, the bugs walked and rotated toward the player with my own implementation using Coroutine and rigidbody velocity being set to a speed multiplied by the normalized vector from the enemy to the player. This was changed to NavMesh beacuse it was more natural looking and could avoid the parts of the computer.) To make the bug move toward the player a script is used to set the destination of the NavMesh Agent to the players' position each fixed update. When the enemy is attacking or dead isStopped is set to true to stop the enemy from moving.
+
+## Attacking
+When the player is close to the bug, the bug attacks the player and deals damage. This is done in the bugs' Update function which is called each frame. To know if the bug is in range a distance is calculated with the Vector3 distance function with the player and bug position. Then the DamageRange and the distance is compared and if the distance is smaller and the bug attack is not on cooldown it deals the damage. It also sets the attack on cooldown which is a Coroutine that adds the Deltatime to the attackTime and stops adding when the attackTime is higher than the attackRate. The attackRate is when the bug attacks so if the attackRate is 2, the bug will attack each 2 seconds. (A better name would be attack interval) An animation is also played that moves the bug toward the player using LeanTween and a bite particle is Instantiated.
+### ITarget
+To make the enemy or player take damage I created an interface called ITarget. It has only one function called Damage which the bug or the player defines. The definitions take the health of the target and subtracts it with the damage parameter. It then does whatever should happen when that target takes damage. When the bug takes damage it invokes a OnHit event and instantiate a hit particle which is destroyed after 2 seconds. I use this interface to see if the gun hits something that can take damage. The gun shoots a ray and if the hit has a ITarget component, the damage function is called with the gun damage number.
+```c#
+interface ITarget
+{
+    void Damage(int damage);
+}
+```
+```c#
+private void DamageTarget(RaycastHit hit)
+{
+    GameObject ps = Instantiate(HitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+    Destroy(ps, 2f);
+    ITarget target = hit.collider.GetComponent<ITarget>();
+    if (target != null)
+    {
+      target.Damage(DamageNumber);
+    }
+}
+```
+### Better with Health
+The negative with this system is that a definition has to be written with every new ITarget. Subtracting a health number is written with each ITarget which is code duplication that should be avoided. Another solution would be to have a Health component which only deals with health subtraction/addition. The only difference in the gun is to get the Health component instead of the ITarget. To make the bug or player do something when they take damage an event would be invoked which the bug or player subscribes to. Instead of having a damage function in the bug and player class which subtracts a damage number it only has to be defined in the Health component. This could also be done with a different event for dying. This separates the code and keeps the classes with minimal responsibilities. With this solution you can add the Health component to a GameObject and now have a health number that decreases each time you shoot at it without having to code anything and only using the Unity Editor.
+```C#
+//example class
+public class Health : MonoBehaviour
+{
+  private int currentHealth;
+  private int maxHealth;
+  public void Damage(int damage)
+  {
+    OnDamage?.Invoke();
+    currentHealth -= damage;
+    if(currentHealth <= 0)
+    {
+      OnDeath?.Invoke();
+    }
+  }
+}
+```
 ## VFX with Unity shader graphs and particle system
 
 ## Third person camera
