@@ -66,8 +66,7 @@ public class Health : MonoBehaviour
   }
 }
 ```
-## VFX with Unity shader graphs and particle system
+## Glitches with Unity Shader graph and particle system
 
-## Third person camera
-
-## Shop UI
+## UI
+A Canvas is used as the parent to all the UI and the Canvas is a child of the game scene. This will place the UI correctly with different resolutions. The healthbar is created with a Slider. It is updated with a HealthUI component every frame by assigning the slider value to the player health. The player reference is set by dragging the player to the inspector in the editor. For the ammo a somewhat different approach was used with events. Two events triggered by switching guns and adding ammo to the current gun. When switching guns, the weapon image is changed to the object that was passed through the event. The current gun in the UI is also changed. Adding ammo to the gun will spawn text in the scene showing "+5". Updating the ammo text is done through the Update function by using the current gun. 
