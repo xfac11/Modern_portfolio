@@ -1,5 +1,8 @@
 <style>
 .nav li {display:inline;}
+.nav li:not(:last-child){
+  border-right: 1px solid; margin-right: 5px; padding-right: 5px;
+}
 </style>
 {{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
 <div class="nav">

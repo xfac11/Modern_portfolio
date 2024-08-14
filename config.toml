@@ -63,7 +63,7 @@ DefaultContentLanguageInSubdir = true
   # Color for the intro details and social links block, not applicable for dark mode
   # Supported values: Any color from TailwindCSS default colors
   # Reference: https://tailwindcss.com/docs/customizing-colors
-  ascentColor = "bg-yellow-600"
+  ascentColor = "bg-orange-500"
 
   # The page bundle that is shown on the front page
   frontBundle = "blog"
@@ -84,6 +84,8 @@ DefaultContentLanguageInSubdir = true
   # Thumbnails in home and blog pages will still be shown
   # This setting can also be in page's markdown file
   hidePageThumbnail = false
+
+  
 
 # Comments system
 [params.comments]

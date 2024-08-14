@@ -4,7 +4,7 @@ title: "Bug Invasion"
 date: 2021-12-01
 description: "Third person shooter made in C# using Unity where I made an enemy with procedural animation"
 tags: ["Unity", "C#", "Blender", "VS"]
-thumbnail: /oil_spillage_head.PNG
+thumbnail: /bug_invasion_head.png
 ---
 
 {{< youtube PP9p77pqGvc >}}
@@ -29,13 +29,13 @@ The game world is placed inside a computer which has typical circuit board parts
 When the player is close to the bug, the bug attacks the player and deals damage. This is done in the bugs' Update function which is called each frame. To know if the bug is in range a distance is calculated with the Vector3 distance function with the player and bug position. Then the DamageRange and the distance is compared and if the distance is smaller and the bug attack is not on cooldown it deals the damage. It also sets the attack on cooldown which is a Coroutine that adds the Deltatime to the attackTime and stops adding when the attackTime is higher than the attackRate. The attackRate is when the bug attacks so if the attackRate is 2, the bug will attack each 2 seconds. (A better name would be attack interval) An animation is also played that moves the bug toward the player using LeanTween and a bite particle is Instantiated.
 ### ITarget
 To make the enemy or player take damage I created an interface called ITarget. It has only one function called Damage which the bug or the player defines. The definitions take the health of the target and subtracts it with the damage parameter. It then does whatever should happen when that target takes damage. When the bug takes damage it invokes a OnHit event and instantiate a hit particle which is destroyed after 2 seconds. I use this interface to see if the gun hits something that can take damage. The gun shoots a ray and if the hit has a ITarget component, the damage function is called with the gun damage number.
-```c#
+```C#
 interface ITarget
 {
     void Damage(int damage);
 }
 ```
-```c#
+```C#
 private void DamageTarget(RaycastHit hit)
 {
     GameObject ps = Instantiate(HitEffect, hit.point, Quaternion.LookRotation(hit.normal));
