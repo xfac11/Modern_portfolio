@@ -69,4 +69,14 @@ public class Health : MonoBehaviour
 ## Glitches with Unity Shader graph and particle system
 
 ## UI
-A Canvas is used as the parent to all the UI and the Canvas is a child of the game scene. This will place the UI correctly with different resolutions. The healthbar is created with a Slider. It is updated with a HealthUI component every frame by assigning the slider value to the player health. The player reference is set by dragging the player to the inspector in the editor. For the ammo a somewhat different approach was used with events. Two events triggered by switching guns and adding ammo to the current gun. When switching guns, the weapon image is changed to the object that was passed through the event. The current gun in the UI is also changed. Adding ammo to the gun will spawn text in the scene showing "+5". Updating the ammo text is done through the Update function by using the current gun. 
+![Bug invasion UI gameobjects](/bug_invasion_ui_gameobjects.png)
+A Canvas is used as the parent to all the UI and the Canvas is a child of the game scene. This will place the UI correctly with different resolutions. The healthbar is created with a Slider. It is updated with a HealthUI component every frame by assigning the slider value to the players' health. The player reference is set by dragging the player to the inspector in the editor. For the ammo a somewhat different approach was used with events. Two events invoked by switching guns and adding ammo to the current gun. When switching guns, the weapon image is changed to the object that was passed through the event. The current gun in the UI is also changed. Adding ammo to the gun will spawn text in the scene showing "+5". Updating the ammo text is done through the Update function by using the current gun.
+
+![Bug invasion UI](/bug_invasion_ui.png) <!-- Add a video with interaction with the UI -->
+
+
+### Improvement
+Some improvements to the UI need to be done in order to scale it for further development. To easily make changes to the UI and separate it from the game scene a scene is created for it. Modifying the UI can now be done in its own scene and to use it in the game scene we load it in. Another advantage is that we can test the UI without having to start the whole game scene. Another improvement is to use an event to update the healthbar instead of updating it each frame. Each time the player takes damage we invoke an event and the health UI assign its new value. The UI showing the current ammo would also be updated with an event instead of an Update.
+
+Making each type of UI a prefab would also make it more editable without having to change the UI scene although the prefabs could display different when editing them in the prefab mode. To fix this we can set the prefab editing environment to be the UI scene.
+With the UI being its own scene a different problem arises. Now we cannot drag the player to the healthbar so to solve it a UI controller is used to add the functions of the UI to the different events. The events are static so we can use the class name and the name of the event to add the functions.
