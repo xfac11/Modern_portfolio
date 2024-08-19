@@ -66,7 +66,6 @@ public class Health : MonoBehaviour
   }
 }
 ```
-## Glitches with Unity Shader graph and particle system
 
 ## UI
 ![Bug invasion UI gameobjects](/bug_invasion_ui_gameobjects.png)
@@ -83,6 +82,6 @@ With the UI being its own scene a different problem arises. Now we cannot drag t
 
 
 ## What I learned
-My goal for this project was to be a part of a game jam and finish in time and to create a procedurally generated animation. I did finish in time but could have polished the project more as mentioned in the improvements in UI and Attacking. The bugs' procedurally animation is the most interesting part of this project and I believe the animation turned out good. Although one thing that I could have done is to research how bugs walk in real life to get a grasp of what I am trying to create. The player model also lacks some polish and the walk animation also need too be better. Next time I would create the animation in blender instead of using a proceduraly animated one.
+My goal for this project was to be a part of a game jam and finish in time and to create a procedurally generated animation. I did finish in time but could have polished the project more as mentioned in the improvements in UI and Attacking. The bugs' procedurally animation is the most interesting part of this project and I believe the animation turned out good. Although one thing that I could have done is to research how bugs walk in real life to get a grasp of what I am trying to create. The player model also lacks some polish and the walk animation also need to be better. Next time I would create the animation in blender instead of using a proceduraly animated one.
 
 I will take the improvements that I mentioned and use more composition when I design my systems in my next project. It was also a fun and good learning experience trying to create a game in a limited time frame. 

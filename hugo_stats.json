@@ -45,6 +45,7 @@
     ],
     "classes": [
       "absolute",
+      "active",
       "bg-gray-100",
       "bg-orange-500",
       "bg-white",
@@ -64,6 +65,7 @@
       "dark:text-gray-600",
       "dark:text-gray-800",
       "dark:text-white",
+      "disabled",
       "flex",
       "flex-1",
       "flex-col",
@@ -143,6 +145,10 @@
       "p-1",
       "p-2",
       "p-6",
+      "page-item",
+      "page-link",
+      "pagination",
+      "pagination-default",
       "pb-4",
       "pb-6",
       "place-items-center",
@@ -199,15 +205,7 @@
       "enemy-ai-using-unity-navmesh-agent",
       "glitches-with-unity-shader-graph-and-particle-system",
       "glow-map-and-back-to-front",
-      "h1",
-      "h2",
-      "h3",
-      "h4",
-      "h5",
-      "h6",
-      "heading",
-      "headings",
-      "inline-markdown-within-tables",
+      "improvement",
       "itarget",
       "particle-system",
       "procedural-animation",
@@ -215,7 +213,8 @@
       "rendering",
       "shadow-mapping",
       "ui",
-      "update"
+      "update",
+      "what-i-learned"
     ]
   }
 }
