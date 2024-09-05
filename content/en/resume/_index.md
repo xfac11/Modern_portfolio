@@ -1,7 +1,7 @@
 ---
 author: Filip Karlsson
 title: Resume
-thumbnail: /Filip_Karlsson_-_Game_Programmer-3.pdf
+thumbnail: /FilipKarlsson_GameProgrammer_CV.pdf
 ---
 
 
