@@ -2,7 +2,8 @@
 author: "Filip Karlsson"
 title: "Oil Spillage"
 date: 2020-08-15
-description: "Top down car shooter made in C++ using the DirectX11 graphics API where I made a particle system and more"
+description: "Top down car shooter made in C++ using the DirectX11 graphics API where I made a shadow mapping with directional and spot light, particle system focused on performance with editor and save/load capabilites, Memory and performance optimization, tire tracks using the particle system and compute shader, objective system and UI. Collaborated with 10 other people.
+"
 tags: ["DirectX11", "C++", "VS"]
 thumbnail: /oil_spillage_head.PNG
 ---

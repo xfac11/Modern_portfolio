@@ -1,4 +1,4 @@
-<div class="p-2">
+<div class="p-2 bg-cyan-900 rounded w-full h-full">
 <a href="{{ .Permalink }}">
   {{ if .Params.thumbnail }}
   <div class="relative">
@@ -13,8 +13,8 @@
     {{ end }}
   </div>
   {{ end }}
-  <div class="my-2 text-xl font-semibold">{{ .Params.title }}</div>
-  <div>{{ .Params.description }}</div>
+  <div class="my-2 text-white text-xl font-semibold">{{ .Params.title }}</div>
+  <div class="text-gray-50">{{ .Params.description }}</div>
 </a>
 {{ if not (or (or .Site.Params.hideOtherLanguages .Params.hideOtherLanguages) false) }}
   {{ if .IsTranslated -}}

@@ -2,7 +2,7 @@
 author: "Filip Karlsson"
 title: "Bug Invasion"
 date: 2021-12-01
-description: "Third person shooter made in C# using Unity where I made an enemy with procedural animation"
+description: "For the Game Off jam. A third person shooter made in C# using Unity with enemy AI using procedural animation, Nav Mesh and attack system, shop with upgrades, wave system, VFX using shader graph and particle system."
 tags: ["Unity", "C#", "Blender", "VS"]
 thumbnail: /bug_invasion_head.png
 ---
