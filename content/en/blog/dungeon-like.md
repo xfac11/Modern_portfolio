@@ -47,4 +47,4 @@ The most interesting is the item stat which is also a resource that holds data f
 Shooting type is how the projectile is shot. Random dircetion, rotates around the player, stays on the player and only shoots once and more ways and is an enum. The item type is either weapon or passive to tell if it should add to the players' stats or be used as a weapon.
 
 Each time an item is chosen to be added to the inventory an event/signal is fired that the inventory has been changed. The event sends the new item name and how many stacks there is. Then it checks if the new item is a passive and if so add the stats of the item to the player with the updated stack size. 
-If it is a weapon it is handled each second by a function called ProcessItems which sends the weapon and the number of stacks to a different class called ItemHandler. ItemHandler shoots the 
+If it is a weapon it is handled each second by a function called ProcessItems which sends the weapon and the number of stacks to a different class called ItemHandler which shoots the projectile in the item with the shoot type of the weapon.
