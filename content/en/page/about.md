@@ -1,5 +1,5 @@
 ---
-author: Katheryn Fox
+author: Filip Karlsson
 title: About Me
 date: 2021-07-15
 description:
@@ -7,20 +7,10 @@ keywords: ["about-us", "about-hugo", "contact"]
 type: about
 ---
 
-Written in Go, Hugo is an open source static site generator available under the [Apache Licence 2.0.](https://github.com/gohugoio/hugo/blob/master/LICENSE) Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.
+Passionate Game programmer graduate with experience creating interactive and immersive games and prototypes. My top skills include C++, Unity, Godot, Git, and problem-solving. One of my achievements were when I was part of a 11-member team creating a game where I saw players smiling when playing. That brought me happiness and further drive. Here I also created a particle system that was optimized on the GPU using compute shaders for this game. My passion is to create optimized and immersive games with a focus on the players.
 
-Hugo makes use of a variety of open source projects including:
+I'm currently looking for opportunities as a Game Programmer focused on Gameplay.
 
-- https://github.com/yuin/goldmark
-- https://github.com/alecthomas/chroma
-- https://github.com/muesli/smartcrop
-- https://github.com/spf13/cobra
-- https://github.com/spf13/viper
+I went to Blekinge Institute of Technology and graduated with a bachelor in computer science with the orientation game programming. I started in 2017 and graduated 2021 which was a wonderful time of education and passion in creating video games. Meeting people that had the same interest was one of the best part in my journey at Blekinge Institute of Technology. I did many projects during this time but I show my two largest in the projects tab.
 
-Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.
-
-Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.
-
-Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.
-
-Learn more and contribute on [GitHub](https://github.com/gohugoio).
+Hope this portfolio gives you an idea of my expertise and joy in creating immersive games.
