@@ -2,7 +2,7 @@
 author: "Filip Karlsson"
 title: "Dungeon-Like"
 date: 2023-10-18
-description: "Topdown 2D bullet heaven with many different items and weapons. Item system with various attacks and stats created with Godots' Resource, UI created with Godots' style system, finite state machine for enemy movement, save and load system using JSON and Resource"
+description: "Topdown 2D bullet heaven with many different items and weapons. Item system with various attacks and stats created with Godots' Resource, UI created with Godots' theme system, finite state machine for enemy movement, save and load system using JSON and Resource"
 tags: ["Godot", "GDScript"]
 thumbnail: /dungeon_like_head.png
 ---
@@ -25,3 +25,26 @@ The projectile has a lifetime and when it reaches its lifetime it gets destroyed
 ### Hitbody
 Hitbody is called when another body enters the Area2D node which is the root node of the Projectile. For this a signal is used called body_entered which the Area2D defines. The base projectile has a function that body_entered calls and in this the Hitbody is called with the body from the body_entered signal. With this we can cause damage to the enemy when it enters the area of the projectile. The spear uses a piercing projectile which keeps the number of hits as a integer and is destroyed when the number of hits is equal to the maximum number of hits. Another projectile is a on hit projectile which spawns four projectiles when being hit.
 
+## Items
+Items can be defined in the Godot editor by creating a Item resource. The Items are placed into the Items folder and the game will create a database of those items. The item has a name, description, texture, projectile scene and an item stat. 
+
+The most interesting is the item stat which is also a resource that holds data for:
+- Damage
+- Speed
+- Health
+- Health regen
+- Critical chance
+- Critical damage
+- Dodge chance
+- Stackable
+- Max stacks
+- Projectile Lifetime
+- Projectile speed
+- Damage type
+- Shooting type
+- Item type
+
+Shooting type is how the projectile is shot. Random dircetion, rotates around the player, stays on the player and only shoots once and more ways and is an enum. The item type is either weapon or passive to tell if it should add to the players' stats or be used as a weapon.
+
+Each time an item is chosen to be added to the inventory an event/signal is fired that the inventory has been changed. The event sends the new item name and how many stacks there is. Then it checks if the new item is a passive and if so add the stats of the item to the player with the updated stack size. 
+If it is a weapon it is handled each second by a function called ProcessItems which sends the weapon and the number of stacks to a different class called ItemHandler. ItemHandler shoots the 
