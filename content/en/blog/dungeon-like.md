@@ -5,6 +5,7 @@ date: 2023-10-18
 description: "Topdown 2D bullet heaven with many different items and weapons. Item system with various attacks and stats created with Godots' Resource, UI created with Godots' theme system, finite state machine for enemy movement, save and load system using JSON and Resource"
 tags: ["Godot", "GDScript"]
 thumbnail: /dungeon_like_head.png
+github: "https://github.com/xfac11/Dungeon-like"
 ---
 
 

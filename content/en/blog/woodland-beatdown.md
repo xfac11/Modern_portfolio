@@ -5,6 +5,7 @@ date: 2019-06-03
 description: "2.5D local multiplayer animal fighter made in C++ using the DirectX11 graphics API where my top contributions were a deferred renderer with volume lights, glow effect and shadow mapping with directional light. Collaborated with 5 other people"
 tags: ["DirectX11", "C++", "VS"]
 thumbnail: /woodland_beatdown_head.png
+github: "https://github.com/xfac11/LitetSpel"
 ---
 
 {{< youtube JDSuGOHlfNI >}}

@@ -5,6 +5,7 @@ date: 2021-12-01
 description: "For the Game Off jam. A third person shooter made in C# using Unity with enemy AI using procedural animation, Nav Mesh and attack system, shop with upgrades, wave system, VFX using shader graph and particle system."
 tags: ["Unity", "C#", "Blender", "VS"]
 thumbnail: /bug_invasion_head.png
+github: "https://github.com/xfac11/Bug-Game"
 ---
 
 Bug invasion was part of GitHub Game Off 2021 which is a annual game jam where you get one month to create a game based on one theme. The theme was "Bug" so the first thing I did was to brainstorm ideas. After removing "ant simulation" and "fly tapper" I landed on a game where the bugs in a computer is getting destroyed by the player or "fixed". I chose the Unity game engine because of my past experience with it.
