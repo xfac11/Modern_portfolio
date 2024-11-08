@@ -11,10 +11,14 @@
       {{ partial "tags.html" .}}
     </div>
     <div class="text-gray-50">{{ .Params.description }}</div>
-    <div class="text-right text-white">
-      <a href="{{ .Permalink }}">Read more</a>
-      <br>
-      <a href="{{ .Params.github }}">GitHub</a>
+    <br>
+    <div class="text-black">
+      &bull;
+      <a class="text-white" target="_blank" href="{{ .Params.github }}">
+        GitHub
+      </a>
+      &nbsp;&bull;
+      <a class="text-white" href="{{ .Permalink }}">Read more</a>
     </div>
   </a>
 </div>
