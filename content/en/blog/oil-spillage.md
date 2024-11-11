@@ -4,7 +4,7 @@ title: "Oil Spillage"
 date: 2020-08-15
 description: "Top down car shooter made in C++ using the DirectX11 graphics API where I made a shadow mapping with directional and spot light, particle system focused on performance with editor and save/load capabilites, Memory and performance optimization, tire tracks using the particle system and compute shader, objective system and UI. Collaborated with 10 other people.
 "
-tags: ["DirectX11", "C++", "VS"]
+tags: ["DirectX11", "C++", "VS", "Graphics",]
 thumbnail: /oil_spillage_head.PNG
 github: "https://github.com/Xemrion/StortSpelProjektGrupp2"
 ---
@@ -18,6 +18,15 @@ After the particle system I created shadows for the engine with both spot and di
 
 Apart from the shadows and particle system I also helped with the game logic, UI for the car parts, some modeling and some texturing.
 
+Tools:
+* **C++**
+* **DirectX 11**
+* **Particle system**
+* **Visual studio**
+* **Visual studio graphics debugger**
+* **RenderDoc**
+* **git** (source control)
+* **Google sheets** (task tracking)
 
 ## Particle system
 The system needed to be on the GPU for fast performance and for this I needed to learn how to use compute shaders. For this

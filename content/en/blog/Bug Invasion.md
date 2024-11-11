@@ -3,14 +3,23 @@ author: "Filip Karlsson"
 title: "Bug Invasion"
 date: 2021-12-01
 description: "For the Game Off jam. A third person shooter made in C# using Unity with enemy AI using procedural animation, Nav Mesh and attack system, shop with upgrades, wave system, VFX using shader graph and particle system."
-tags: ["Unity", "C#", "Blender", "VS"]
+tags: ["Unity", "C#", "VS", "Gameplay", "UI"]
 thumbnail: /bug_invasion_head.png
 github: "https://github.com/xfac11/Bug-Game"
 ---
 
-Bug invasion was part of GitHub Game Off 2021 which is a annual game jam where you get one month to create a game based on one theme. The theme was "Bug" so the first thing I did was to brainstorm ideas. After removing "ant simulation" and "fly tapper" I landed on a game where the bugs in a computer is getting destroyed by the player or "fixed". I chose the Unity game engine because of my past experience with it.
+The game is a third person shooter with a pistol to "kill" the bugs and a "fixer" to fix the glitches. I used Trello to mange the project and git as source control with GitHub as host service. The game features procedural animation for the enemies using nav mesh agents and my own attack system, shop with upgrades,   wave system, visual effects using shader graph and particle system.
 
-The game is a third person shooter with a pistol to "kill" the bugs and a "fixer" to fix the glitches. I used Trello to plan the project and to manage all the tasks that needed to be done. With this project I wanted to tackle something new and finish in time for the jam. The new thing was procedural animation that I used for the bugs and player.
+Tools:
+* **Unity**
+* **C#**
+* **Action** **events**
+* **Nav** **mesh**
+* **Shader** **graph**
+* **Particle** **system**
+* **git** (source control)
+* **Trello**
+
 
 ## Procedural animation
 After watching [Codeers](https://youtu.be/e6Gjhr1IP6w?si=Iv_sTqm-Kx0YjVQV) brilliant video, I wanted my bugs to behave the same. To start off I used the inverse kinematics asset called Fast IK by [Daniel Erdmann](https://assetstore.unity.com/publishers/30624). It is used to determine the motion a bone structure should make to reach a certain position. For example in games where the foot of the character is placed on top of a staircase. In this case the position is determined by a ray shooting down from the foot and colliding with the scene, say the staircase.
