@@ -18,8 +18,8 @@ DefaultContentLanguageInSubdir = true
     weight = 1
     languageName = "English"
     [languages.en.params]
-      introTitle = "Hey! I'm Filip Karlsson"
-      introSubtitle = "Game programmer with gameplay and graphics experience who enjoys creating scalable code and learning new tech"
+      introTitle = "Filip Karlsson"
+      introSubtitle = "Game programmer"
       introPhoto = "/FilipKarlssonpfpMirrored.jpg"
     [[languages.en.menu.main]]
         name = "Projects"
