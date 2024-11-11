@@ -33,7 +33,7 @@ DefaultContentLanguageInSubdir = true
 
     [[languages.en.menu.main]]
         name = "Resume"
-        url = "resume/FilipKarlsson_GameProgrammer_CV.pdf"
+        url = "resume/Filip_Karlsson_-_Game_Programmer_CV.pdf"
         weight = 3
 [params]
   # Enable the darkmode toggle in header
